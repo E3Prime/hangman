@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+.slide-left {
+  transform: translateX(-100vw);
+}
+
+.slide-up {
+  transform: translateY(-100vh);
+}
+
+.fade-in {
+  @starting-style {
+    opacity: 0;
+  }
+
+  opacity: 1;
+}
+
 @theme {
   --breakpoint-xs: 31.25rem;
   --background-image-play-gradient: linear-gradient(to bottom, rgb(254, 113, 254), rgb(36, 98, 255));

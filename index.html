@@ -9,32 +9,88 @@
     <script type="module" src="src/main.ts"></script>
   </head>
   <body class="min-h-svh grid">
-    <main class="bg-[url('/background-mobile.svg')] md:bg-[url('/background-desktop.svg')] bg-cover bg-center">
+    <main class="bg-[url('/background-mobile.svg')] md:bg-[url('/background-desktop.svg')] bg-cover bg-center overflow-x-hidden">
       <!-- ANCHOR Menu Screen -->
-      <section id="mainMenu" class="h-full grid place-items-center relative">
+      <section id="mainMenu" class="h-full grid place-items-center relative transition-transform duration-775">
         <div
           class="w-full aspect-9/14 max-w-90 md:aspect-5/4 md:max-w-125 flex flex-col justify-around items-center gap-3 bg-glass-blue border-4 border-[#3c76c7] rounded-[4rem] backdrop-blur-md px-4 py-8">
           <img class="relative -mt-30" src="/logo.svg" alt="logo icon" width="300" height="300" />
           <button
             type="button"
+            id="revealCategories"
             class="bg-play-gradient shadow-glass-inset w-45 aspect-square md:my-10 rounded-full border-b-8 border-[#1e3a8a] active:border-b-0 active:translate-y-1 transition-transform duration-300 cursor-pointer">
             <img src="/icon-play.svg" alt="play icon" class="rounded-full mx-auto translatex-1" />
           </button>
           <button
             type="button"
-            id="instructions"
+            id="revealInstructions"
             class="bg-glass-button shadow-glass-inset border-b-4 border-[#2b5ba9] text-white font-bold uppercase text-xl px-10 py-4 rounded-full tracking-widest transition-hover hover:brightness-110 transition-transform duration-300 active:translate-y-1 cursor-pointer">
             How to play
           </button>
         </div>
       </section>
 
-      <!-- ANCHOR Instructions Screen -->
-      <section id="instructions" class="h-full flex flex-col gap-3 py-2" hidden>
+      <!-- ANCHOR Categories Screen -->
+      <section id="categorySelection" class="h-full flex flex-col gap-3 py-2 transition-discrete transition-opacity opacity-0 duration-775" hidden>
         <div class="flex items-center justify-between mx-auto w-[90vw]">
           <div>
             <button
-              id="backToMenu"
+              id="backToMenuFromCategories"
+              type="button"
+              class="bg-play-gradient w-12 aspect-square rounded-full border-b-4 border-[#2d3643] shadow-glass-inset active:border-b-0 active:translate-y-1 transition-transform duration-300 cursor-pointer">
+              <img src="/icon-back.svg" alt="back" class="w-6 h-6 mx-auto" />
+            </button>
+          </div>
+          <div>
+            <h1
+              data-text="Pick a Category"
+              class="relative font-black text-2xl lg:text-4xl uppercase tracking-wider text-[#0b1832] [-webkit-text-stroke:8px_#0b1832] [paint-order:stroke_fill] after:content-[attr(data-text)] after:absolute after:inset-0 after:bg-linear-to-b after:from-white after:to-[#67e8f9] after:bg-clip-text after:text-transparent after:[-webkit-text-stroke:0]">
+              Pick a Category
+            </h1>
+          </div>
+          <div class="hidden md:block"></div>
+        </div>
+
+        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-3 items-center" id="selectCateogry">
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Movies
+          </button>
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Tv Shows
+          </button>
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Countries
+          </button>
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Capital Cities
+          </button>
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Animals
+          </button>
+          <button
+            type="button"
+            class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
+            Sports
+          </button>
+        </div>
+      </section>
+
+      <!-- ANCHOR Instructions Screen -->
+      <section id="instructions" class="h-full flex flex-col gap-3 py-2 transition-transform duration-775 transform translate-x-[100vw]" hidden>
+        <div class="flex items-center justify-between mx-auto w-[90vw]">
+          <div>
+            <button
+              id="backToMenuFromInstructions"
               type="button"
               class="bg-play-gradient w-12 aspect-square rounded-full border-b-4 border-[#2d3643] shadow-glass-inset active:border-b-0 active:translate-y-1 transition-transform duration-300 cursor-pointer">
               <img src="/icon-back.svg" alt="back" class="w-6 h-6 mx-auto" />
