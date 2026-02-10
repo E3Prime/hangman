@@ -30,6 +30,194 @@
         </div>
       </section>
 
+      <!-- ANCHOR Game Screen -->
+      <section id="game" class="relative h-full flex flex-col p-4 transition-discrete transition-opacity opacity-0 duration-775" hidden>
+        <div class="flex flex-col md:flex-row w-full max-w-400 mx-auto gap-5">
+          <div class="flex items-center gap-5">
+            <button
+              type="button"
+              id="openMenuOptions"
+              class="bg-play-gradient shadow-glass-inset w-15 aspect-square rounded-full border-b-8 border-[#1e3a8a] active:border-b-0 active:translate-y-1 transition-transform duration-300 cursor-pointer">
+              <img src="/icon-menu.svg" alt="menu icon" width="25" class="mx-auto translatex-1" />
+            </button>
+            <span
+              data-text="Countries"
+              class="relative font-black text-2xl lg:text-4xl uppercase tracking-wider text-[#0b1832] [-webkit-text-stroke:8px_#0b1832] [paint-order:stroke_fill] after:content-[attr(data-text)] after:absolute after:inset-0 after:bg-linear-to-b after:from-white after:to-[#67e8f9] after:bg-clip-text after:text-transparent after:[-webkit-text-stroke:0]">
+              Countries
+            </span>
+          </div>
+          <div class="flex flex-row-reverse justify-end md:flex-row items-center gap-3 w-full ps-1">
+            <div class="flex-1 h-5 max-w-50 rounded-full bg-indigo-50 p-1">
+              <span id="healthbar" class="block w-full h-full bg-blue-950 rounded-full"></span>
+            </div>
+            <img src="/icon-heart.svg" alt="heart icon" />
+          </div>
+        </div>
+
+        <div id="guessingPortion" class="flex-1 space-y-9 content-center text-indigo-50">
+          <div id="mysteryWord" class="flex flex-wrap justify-around max-w-240 mx-auto gap-3 text-xl sm:text-3xl md:text-5xl"></div>
+
+          <div class="grid grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3 max-w-225 mx-auto">
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              A
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              B
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              C
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              D
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              E
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              F
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              G
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              H
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              I
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              J
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              K
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              L
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              M
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              N
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              O
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              P
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              Q
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              R
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              S
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              T
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              U
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              V
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              W
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              X
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              Y
+            </button>
+            <button
+              type="button"
+              class="w-15 mx-auto aspect-square bg-indigo-50/90 text-zinc-900 rounded-lg transition-transform duration-300 active:translate-y-1 text-lg font-semibold cursor-pointer">
+              Z
+            </button>
+          </div>
+        </div>
+
+        <div id="menuOptions" class="absolute grid place-items-center inset-0 bg-[rgb(36_99_255/0.3)] backdrop-blur-sm transition-opacity duration-775 opacity-0" hidden>
+          <div
+            class="slide-up relative w-full aspect-9/14 max-w-90 md:aspect-5/4 md:max-w-125 transition-transform duration-775 flex flex-col justify-around items-center gap-3 bg-glass-blue border-4 border-[#3c76c7] rounded-[4rem] backdrop-blur-md px-4 py-8">
+            <span
+              data-text="Paused"
+              class="relative -mt-20 font-black text-5xl lg:text-4xl uppercase tracking-wider text-[#0b1832] [-webkit-text-stroke:8px_#0b1832] [paint-order:stroke_fill] after:content-[attr(data-text)] after:absolute after:inset-0 after:bg-linear-to-b after:from-white after:to-[#67e8f9] after:bg-clip-text after:text-transparent after:[-webkit-text-stroke:0]">
+              Paused
+            </span>
+            <button
+              type="button"
+              class="bg-glass-button shadow-glass-inset border-b-4 border-[#2b5ba9] text-white font-bold uppercase text-xl px-10 py-4 rounded-full tracking-widest transition-hover hover:brightness-110 transition-transform duration-300 active:translate-y-1 cursor-pointer">
+              Continue
+            </button>
+            <button
+              type="button"
+              class="bg-glass-button shadow-glass-inset border-b-4 border-[#2b5ba9] text-white font-bold uppercase text-xl px-10 py-4 rounded-full tracking-widest transition-hover hover:brightness-110 transition-transform duration-300 active:translate-y-1 cursor-pointer">
+              New Category
+            </button>
+            <button
+              type="button"
+              class="bg-glass-button shadow-glass-inset border-b-4 border-[#2b5ba9] text-white font-bold uppercase text-xl px-10 py-4 rounded-full tracking-widest transition-hover hover:brightness-110 transition-transform duration-300 active:translate-y-1 cursor-pointer">
+              Quit Game
+            </button>
+          </div>
+        </div>
+      </section>
+
       <!-- ANCHOR Categories Screen -->
       <section id="categorySelection" class="h-full flex flex-col gap-3 py-2 transition-discrete transition-opacity opacity-0 duration-775" hidden>
         <div class="flex items-center justify-between mx-auto w-[90vw]">
@@ -51,33 +239,39 @@
           <div class="hidden md:block"></div>
         </div>
 
-        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-3 items-center" id="selectCateogry">
+        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-3 items-center" id="selectCategory">
           <button
+            id="moviesCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Movies
           </button>
           <button
+            id="tvShowsCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Tv Shows
           </button>
           <button
+            id="countriesCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Countries
           </button>
           <button
+            id="capitalCitiesCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Capital Cities
           </button>
           <button
+            id="animalsCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Animals
           </button>
           <button
+            id="sportsCategory"
             type="button"
             class="max-w-75 max-h-18.75 w-full h-full mx-auto bg-blue-600/70 rounded-lg shadow-md shadow-blue-950/90 text-indigo-50 text-lg text-shadow-sm text-shadow-indigo-100/70 active:translate-y-1 transition-transform duration-300 cursor-pointer uppercase">
             Sports
