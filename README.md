@@ -11,7 +11,7 @@ A classic word-guessing game. Built with TypeScript and Tailwind CSS, it feature
 
 ## 🔗 Links
 
-- **Live Demo Link:**
+- **Live Demo Link:** https://e3prime.github.io/hangman
 
 ## 🕹️ Hangman Game Showcase
 
