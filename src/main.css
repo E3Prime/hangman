@@ -27,13 +27,13 @@
   border-radius: 19px;
   transform-style: preserve-3d;
   transition:
-    transform 0.7s ease-in,
+    transform 0.514s ease-in,
     background-color 0.5s ease;
 }
 
 .correct-letter-rotate {
   background-color: rgb(36 99 255 / 0.9);
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 
 @theme {
